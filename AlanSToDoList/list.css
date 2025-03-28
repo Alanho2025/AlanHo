@@ -1,0 +1,147 @@
+#NewItem, #CompleteItem, #ModifyItem, #ModifyTime, #PriorityItem, #DeleteItem {
+    display: none;
+}
+
+body{
+    background-image: url("./bigleaves.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#2C3E50;
+    text-shadow: 1px 2px rgb(94, 10, 73);
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明背景色 */
+    background-blend-mode: lighten; /* 讓圖片與顏色融合 */
+    font-family: "Share Tech Mono", "Rajdhani", "Exo", sans-serif;
+}
+h1{
+    text-align: center;
+    color:#4B0082;
+}
+h2{
+    font-size: 40px;
+    color:#4B0082;
+}
+h3{
+    font-size: 30px;
+    color:#4B0082;
+    margin-left: 40px;
+}
+#Todo{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+.table tr{
+    display:grid;
+    grid-template-columns: 0.2fr 0.5fr 0.3fr 0.4fr 0.3fr;
+}
+.table thead{
+    position: sticky;
+    top: 0; /* 固定在頂部 */
+    z-index: 1; /* 保證標題欄在前面 */
+}
+
+
+.table th, .table td {
+    text-align: left;
+    padding: 5px;
+    
+}
+.new_item{
+    border: 1px dotted rgb(149, 107, 121);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 0.2fr 0.5fr 0.2fr 0.5fr 0.3fr;
+    /*grid-auto-flow: column;*/
+    word-wrap:break-word;
+    white-space: nowrap; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;  
+}
+.modify_item,.complete_item,.delete_item, .high_priority,.modify_time {
+    border: 1px dotted rgb(149, 107, 121);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 0.2fr 0.5fr 0.3fr;
+    /*grid-auto-flow: column;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.toolbox{
+    border: 1px dotted rgb(149, 107, 121);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /*display: flex;
+    text-justify: auto;*/
+    display: grid;
+    grid-template-columns: 0.5fr 0.2fr 0.5fr 0.2fr 0.5fr 0.2fr;
+    grid-template-rows:auto auto auto auto auto auto;
+    word-wrap:break-word;
+    white-space: nowrap; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.toolbox label{
+    font-size: 20px;
+}
+label{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding: auto;
+}
+button {
+    border-radius: 8px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-color: #0077B6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    box-shadow: none; /* 滑鼠移上去時移除陰影，營造按下效果 */
+    transform: translateY(2px);
+}
+.table th {
+    font-weight: bold;
+}
+
+.table > thead {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 1px solid #3AAA35;
+    border-bottom: 1px solid #3AAA35;
+}
+
+.table > tbody {
+    border-bottom: 1px solid #706F6F;
+}
+
+.table > tbody > tr:nth-child(odd) {
+    background-color: rgba(239, 206, 206, 0.4);
+}
+
+.table > tbody > tr:nth-child(even) {
+    background-color: rgba(216, 195, 195, 0.64);
+}
+
+.table.table-hover > tbody > tr:hover {
+    background-color: #B6B7B9;
+}

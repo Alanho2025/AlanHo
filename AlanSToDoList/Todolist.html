@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alan / Alice TO DO LIST</title>
+    <link rel="stylesheet" href="./list.css" />
+    <script src="./list.js" defer></script>
+  </head>
+  <body>
+      <h1>To Do List Table</h1>
+      <h2>Toolbox Control</h2>
+      <div class=toolbox>
+        <label for="new_item">Create new item</label>
+        <select name="new_item" id="item_control_new">
+          <option>Hide</option>
+          <option>Appear</option>
+        </select>
+        <label for="complete_item">Complete Item</label>
+        <select name="complete_item" id="item_control_complete">
+          <option>Hide</option>
+          <option>Appear</option>
+        </select>
+        <label for="Modify_item">Modify Item name</label>
+        <select name="Modify_item" id="item_control_modifyname">
+          <option>Hide</option>
+          <option>Appear</option>
+        </select>
+      </select>
+      <label for="Modify_time">Modify ETA time</label>
+      <select name="Modify_time" id="item_control_modifytime">
+        <option>Hide</option>
+          <option>Appear</option>
+      </select>
+        <label for="Prioritize_item">High/low priority First</label>
+        <select name="Prioritize_item" id="item_control_prioriteze">
+          <option>Hide</option>
+          <option>Appear</option>
+        </select>
+        <label for="delete_item">Delete your complete item</label>
+        <select name="delete_item" id="item_control_delete">
+          <option>Hide</option>
+          <option>Appear</option>
+        </select>
+      </div>
+      <!-- create new item-->
+      <section id = "NewItem">
+        <h2>Create New Item</h2>
+        <div class = new_item>
+          <label for="Todo">Create new item:</label>
+          <input type="string" id="Todo" placeholder="Enter a new to-do item." />
+          <label for="priortize">Setup prioritize:</label>
+          <input type="number" id="priortize" placeholder="Enter 1-5, 5 is the highest." />
+          <label for="ETA">Estimated Finish Time:</label>
+          <input type="date" id="ETA" placeholder="Please enter your time estimated." />
+          <button id="button">Create</button>
+        </div>
+      </section>
+      <!-- select item to change state-->
+      <section id = "CompleteItem">
+        <h2>Complete Item</h2>
+        <div class = complete_item>
+          <label for="item">Choose item:</label>
+          <input type="number" id="item" placeholder="choose the item on the list" />
+          <label for="complete">complete:</label>
+          <select name="ifcomplete" id="complete">
+            <option>Complete</option>
+          </select>
+          <button id="Check_State">Execute!!</button> 
+        </div>
+      </section>
+
+      <!--modify the item content-->
+      <section id = "ModifyItem">
+        <h2>Modify Item name</h2>
+        <div class = modify_item>
+          <label for="item_modify">Choose item:</label>
+          <input type="number" id="item_modify" placeholder="choose the item on the list" />
+          <label for="modify">Modify the item name:</label>
+          <input type="string" id="modify" placeholder="Enter a new item name." />
+          </select>
+          <button id="modify_item">Execute!!</button> 
+        </div>
+      </section>
+      <!--modify time content-->
+      <section id = "ModifyTime">
+        <h2>Modify Item name</h2>
+        <div class = modify_time>
+          <label for="item_choose">Choose item:</label>
+          <input type="number" id="item_choose" placeholder="choose the item on the list" />
+          <label for="modify_time">Modify the time:</label>
+          <input type="date" id="modify_time" placeholder="Please enter your time estimated." />
+          <button id="modify_time_button">Execute!!</button> 
+        </div>
+      </section>
+
+      <!--Sort the item content-->
+      <section id = "PriorityItem">
+        <h2>High/low priority First</h2>
+        <div class = high_priority>
+          <label for="priority">Select Priority Order:</label>
+          <select name="priority" id="priority">
+            <option>High Priority First</option>
+            <option>Low Priority First</option>
+          </select>
+          <button id="Excute">Execute!!</button> 
+        </div>
+      </section>
+      <!--Delete complete item-->
+      <section id = "DeleteItem">
+        <h2>Delete your complete item</h2>
+        <div class = delete_item>
+            <label for="item_delete">Choose item:</label>
+            <input type="number" id="item_delete" placeholder="choose the item on the list" />
+            <button id="delete_item">Execute!!</button> 
+        </div>
+      </section>
+      <!-- Summary the To-Do list mount-->
+      <h2>Item Mount Summary</h2>
+      <h3>There are currently <span id="count">0</span> items in your list.</h3>
+      <div class="container">
+        <h1>My To-Do List</h1>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>To-do list</th>
+              <th>prioritize</th>
+              <th>ETA</th>
+              <th>complete</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- TO-DO list elements will be added to the tbody in your JavaScript code. -->
+          </tbody>
+        </table>
+      </div>
+
+  </body>
+</html>
